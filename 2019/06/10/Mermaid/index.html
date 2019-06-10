@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="使用marmaid让markdown支持作图 mermaid官网 使用目的 让编辑轻量化 简单的文本就可以制作出流程图、时序图、甘特图、用例图 选择支持mermaid并且自己喜欢的编辑环境，而不用来回切换(这是非常重要的，比如我经常使用的是VSCode各种快捷键会让文本编辑变得很容易，相比一些拖拖拽拽可视化那种编辑方式，文本编辑不见得会有多慢)   使用环境 主流的博客和markdown编辑器都支">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-10T15:14:05.758Z">
+<meta property="og:updated_time" content="2019-06-10T15:15:06.730Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mermaid">
 <meta name="twitter:description" content="使用marmaid让markdown支持作图 mermaid官网 使用目的 让编辑轻量化 简单的文本就可以制作出流程图、时序图、甘特图、用例图 选择支持mermaid并且自己喜欢的编辑环境，而不用来回切换(这是非常重要的，比如我经常使用的是VSCode各种快捷键会让文本编辑变得很容易，相比一些拖拖拽拽可视化那种编辑方式，文本编辑不见得会有多慢)   使用环境 主流的博客和markdown编辑器都支">
@@ -184,32 +184,37 @@ A --> B3</pre>
 
 <p>dateFormat  YYYY-MM-DD<br>title Adding GANTT diagram to mermaid</p>
 <p>section A section<br>Completed task            :done,    des1, 2014-01-06,2014-01-08<br>Active task               :active,  des2, 2014-01-09, 3d<br>Future task               :         des3, after des2, 5d<br>Future task2   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  &lt;pre class=&quot;mermaid&quot;&gt;  gantt</span><br><span class="line">  dateFormat  YYYY-MM-DD</span><br><span class="line">  title Adding GANTT diagram to mermaid</span><br><span class="line"></span><br><span class="line">  section A section</span><br><span class="line">  Completed task            :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line">  Active task               :active,  des2, 2014-01-09, 3d</span><br><span class="line">  Future task               :         des3, after des2, 5d</span><br><span class="line">  Future task2               :         des4, after des3, 5d&lt;/pre&gt;</span><br><span class="line"></span><br><span class="line">- classDiagram</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;pre class=&quot;mermaid&quot;&gt;  gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
 
-<p>Class01 &lt;|– AveryLongClass : Cool<br>Class03 <em>– Class04<br>Class05 o– Class06<br>Class07 .. Class08<br>Class09 –&gt; C2 : Where am i?<br>Class09 –</em> C3<br>Class09 –|&gt; Class07<br>Class07 : equals()<br>Class07 : Object[] elementData<br>Class01 : size()<br>Class01 : int chimp<br>Class01 : int gorilla<br>Class08 &lt;–&gt; C2: Cool label</p>
-<pre><code>
-&lt;pre class=&quot;mermaid&quot;&gt;  classDiagram
-Class01 &lt;|-- AveryLongClass : Cool
-Class03 *-- Class04
-Class05 o-- Class06
-Class07 .. Class08
-Class09 --&gt; C2 : Where am i?
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2               :         des4, after des3, 5d&lt;/pre&gt;
+</code></pre></li>
+</ul>
+<ul>
+<li>classDiagram<pre class="mermaid">  classDiagram
+Class01 <|-- averylongclass : cool class03 *-- class04 class05 o-- class06 class07 .. class08 class09 --> C2 : Where am i?
 Class09 --* C3
-Class09 --|&gt; Class07
+Class09 --|> Class07
 Class07 : equals()
 Class07 : Object[] elementData
 Class01 : size()
 Class01 : int chimp
 Class01 : int gorilla
-Class08 &lt;--&gt; C2: Cool label&lt;/pre&gt;
+Class08 <--> C2: Cool label</--></|--></pre>
 
-</code></pre></li>
+
+</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/Mermaid/" data-id="cjwqiomnb0000qg7er57b51rw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/Mermaid/" data-id="cjwqiq3gk0002vg7e0qftaktb" class="article-share-link">Share</a>
       
       
     </footer>

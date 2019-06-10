@@ -88,7 +88,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/testMermaid/" data-id="cjwqjqnxy0000cg7ej6r9vp0a" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/testMermaid/" data-id="cjwqjyvjx0001wo7el9hlu5g9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -274,7 +274,7 @@ Class08 <--> C2: Cool label</--></|--></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/Mermaid/" data-id="cjwqjqny50001cg7et7o7mn4l" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/Mermaid/" data-id="cjwqjyvk10002wo7e8umtg5z0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -311,7 +311,7 @@ Class08 <--> C2: Cool label</--></|--></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/第一篇测试博客/" data-id="cjwqjqnyv0003cg7evoi703x5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/第一篇测试博客/" data-id="cjwqjyvk50003wo7ejwmb70js" class="article-share-link">Share</a>
       
       
     </footer>
@@ -360,7 +360,7 @@ Class08 <--> C2: Cool label</--></|--></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/hello-world/" data-id="cjwqjqny90002cg7emep92jv0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/hello-world/" data-id="cjwqjyvjq0000wo7exuzivs5b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -446,8 +446,8 @@ Class08 <--> C2: Cool label</--></|--></pre>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
 <script src="/js/script.js"></script>
@@ -455,12 +455,19 @@ Class08 <--> C2: Cool label</--></|--></pre>
 
 
 
-  <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({theme: 'forest'});
-    }
-  </script>
+<script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+<script>
+  if (window.mermaid) {
+    // mermaid.initialize({theme: 'forest'});
+    mermaid.initialize({
+      theme: 'forest',
+      flowchart: {
+        curve: 'basis'
+      }
+    });
+
+  }
+</script>
 
   </div>
 </body>

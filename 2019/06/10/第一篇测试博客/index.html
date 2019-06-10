@@ -91,7 +91,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/第一篇测试博客/" data-id="cjwqjqnyv0003cg7evoi703x5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/第一篇测试博客/" data-id="cjwqjyvk50003wo7ejwmb70js" class="article-share-link">Share</a>
       
       
     </footer>
@@ -194,8 +194,8 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
 <script src="/js/script.js"></script>
@@ -203,12 +203,19 @@
 
 
 
-  <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({theme: 'forest'});
-    }
-  </script>
+<script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+<script>
+  if (window.mermaid) {
+    // mermaid.initialize({theme: 'forest'});
+    mermaid.initialize({
+      theme: 'forest',
+      flowchart: {
+        curve: 'basis'
+      }
+    });
+
+  }
+</script>
 
   </div>
 </body>

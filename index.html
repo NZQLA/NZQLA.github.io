@@ -88,7 +88,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/testMermaid/" data-id="cjwqjopjc0002r47eux0vaybl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/testMermaid/" data-id="cjwqjqnxy0000cg7ej6r9vp0a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -210,43 +210,71 @@ A --> B3</pre>
 </li>
 </ul>
 </li>
-<li><p>让流程图中的节点作为链接 <figure class="highlight plain"><figcaption><span>id link introduce```,示例```Click A "https://www.baidu.com" "百度"```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">  </span><br><span class="line">- 使用marmaid的流程图来制作简易的思维导图</span><br><span class="line">  &lt;pre class=&quot;mermaid&quot;&gt;  graph LR;</span><br><span class="line">  %% </span><br><span class="line">  linkStyle default interpolate MonotoneX</span><br><span class="line"></span><br><span class="line">  A(核心主题) --&gt; B1</span><br><span class="line">  A --&gt; B2</span><br><span class="line">  A --&gt; B3</span><br><span class="line">  B1 --&gt; B1C1</span><br><span class="line">  B1 --&gt; B1C2</span><br><span class="line">  B2 --&gt; B2C1&lt;/pre&gt;</span><br><span class="line">  可以满足轻量级的思维导图，节点不能太多，因为它不支持折叠节点呀，太多了屏幕放不下。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  - sequenceDiagram</span><br></pre></td></tr></table></figure></p>
-<p>  participant Alice<br>  participant Bob<br>  Alice-&gt;&gt;John: Hello John, how are you?<br>  loop Healthcheck</p>
-<pre><code>John-&gt;&gt;John: Fight against hypochondria</code></pre><p>  end<br>  Note right of John: Rational thoughts <br>prevail…<br>  John–&gt;&gt;Alice: Great!
-  John-&gt;&gt;Bob: How about you?<br>  Bob–&gt;&gt;John: Jolly good!</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;  sequenceDiagram</span><br><span class="line">    participant Alice</span><br><span class="line">    participant Bob</span><br><span class="line">    Alice-&gt;&gt;John: Hello John, how are you?</span><br><span class="line">    loop Healthcheck</span><br><span class="line">        John-&gt;&gt;John: Fight against hypochondria</span><br><span class="line">    end</span><br><span class="line">    Note right of John: Rational thoughts &lt;br/&gt;prevail...</span><br><span class="line">    John--&gt;&gt;Alice: Great!</span><br><span class="line">    John-&gt;&gt;Bob: How about you?</span><br><span class="line">    Bob--&gt;&gt;John: Jolly good!&lt;/pre&gt;</span><br><span class="line"></span><br><span class="line">- gantt</span><br></pre></td></tr></table></figure>
+<li><p>让流程图中的节点作为链接 <code>click id link introduce</code>,示例<code>Click A &quot;https://www.baidu.com&quot; &quot;百度&quot;</code></p>
+</li>
+</ul>
+<ul>
+<li><p>使用marmaid的流程图来制作简易的思维导图</p>
+<pre class="mermaid">  graph LR;
+%% 
+linkStyle default interpolate MonotoneX
 
-<p>dateFormat  YYYY-MM-DD<br>title Adding GANTT diagram to mermaid</p>
-<p>section A section<br>Completed task            :done,    des1, 2014-01-06,2014-01-08<br>Active task               :active,  des2, 2014-01-09, 3d<br>Future task               :         des3, after des2, 5d<br>Future task2   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">  &lt;pre class=&quot;mermaid&quot;&gt;  gantt</span><br><span class="line">  dateFormat  YYYY-MM-DD</span><br><span class="line">  title Adding GANTT diagram to mermaid</span><br><span class="line"></span><br><span class="line">  section A section</span><br><span class="line">  Completed task            :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line">  Active task               :active,  des2, 2014-01-09, 3d</span><br><span class="line">  Future task               :         des3, after des2, 5d</span><br><span class="line">  Future task2               :         des4, after des3, 5d&lt;/pre&gt;</span><br><span class="line"></span><br><span class="line">- classDiagram</span><br></pre></td></tr></table></figure>
+A(核心主题) --> B1
+A --> B2
+A --> B3
+B1 --> B1C1
+B1 --> B1C2
+B2 --> B2C1</pre>
+<p>可以满足轻量级的思维导图，节点不能太多，因为它不支持折叠节点呀，太多了屏幕放不下。</p>
+</li>
+</ul>
+<ul>
+<li><p>sequenceDiagram</p>
+<pre class="mermaid">  sequenceDiagram
+  participant Alice
+  participant Bob
+  Alice->>John: Hello John, how are you?
+  loop Healthcheck
+      John->>John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts <br>prevail...
+  John-->>Alice: Great!
+  John->>Bob: How about you?
+  Bob-->>John: Jolly good!</pre></li>
+<li><p>gantt</p>
+<pre class="mermaid">  gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
 
-<p>Class01 &lt;|– AveryLongClass : Cool<br>Class03 <em>– Class04<br>Class05 o– Class06<br>Class07 .. Class08<br>Class09 –&gt; C2 : Where am i?<br>Class09 –</em> C3<br>Class09 –|&gt; Class07<br>Class07 : equals()<br>Class07 : Object[] elementData<br>Class01 : size()<br>Class01 : int chimp<br>Class01 : int gorilla<br>Class08 &lt;–&gt; C2: Cool label</p>
-<pre><code>效果  
-
-&lt;pre class=&quot;mermaid&quot;&gt;  classDiagram
-Class01 &lt;|-- AveryLongClass : Cool
-Class03 *-- Class04
-Class05 o-- Class06
-Class07 .. Class08
-Class09 --&gt; C2 : Where am i?
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2               :         des4, after des3, 5d</pre>
+<ul>
+<li>classDiagram<pre class="mermaid">  classDiagram
+Class01 <|-- averylongclass : cool class03 *-- class04 class05 o-- class06 class07 .. class08 class09 --> C2 : Where am i?
 Class09 --* C3
-Class09 --|&gt; Class07
+Class09 --|> Class07
 Class07 : equals()
 Class07 : Object[] elementData
 Class01 : size()
 Class01 : int chimp
 Class01 : int gorilla
-Class08 &lt;--&gt; C2: Cool label&lt;/pre&gt;
+Class08 <--> C2: Cool label</--></|--></pre>
 
 
 
-</code></pre></li>
+
+</li>
+</ul>
+</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/Mermaid/" data-id="cjwqjopj90001r47ecuz4pdt2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/Mermaid/" data-id="cjwqjqny50001cg7et7o7mn4l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -283,7 +311,7 @@ Class08 &lt;--&gt; C2: Cool label&lt;/pre&gt;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/第一篇测试博客/" data-id="cjwqjopjx0003r47e2sxeg4wd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/第一篇测试博客/" data-id="cjwqjqnyv0003cg7evoi703x5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -332,7 +360,7 @@ Class08 &lt;--&gt; C2: Cool label&lt;/pre&gt;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/hello-world/" data-id="cjwqjopj00000r47e04252qs2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/hello-world/" data-id="cjwqjqny90002cg7emep92jv0" class="article-share-link">Share</a>
       
       
     </footer>

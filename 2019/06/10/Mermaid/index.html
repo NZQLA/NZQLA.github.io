@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="使用marmaid让markdown支持作图 mermaid官网 使用目的 让编辑轻量化 简单的文本就可以制作出流程图、时序图、甘特图、用例图 选择支持mermaid并且自己喜欢的编辑环境，而不用来回切换(这是非常重要的，比如我经常使用的是VSCode各种快捷键会让文本编辑变得很容易，相比一些拖拖拽拽可视化那种编辑方式，文本编辑不见得会有多慢)   使用环境 主流的博客和markdown编辑器都支">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-10T15:16:35.206Z">
+<meta property="og:updated_time" content="2019-06-10T15:23:47.075Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mermaid">
 <meta name="twitter:description" content="使用marmaid让markdown支持作图 mermaid官网 使用目的 让编辑轻量化 简单的文本就可以制作出流程图、时序图、甘特图、用例图 选择支持mermaid并且自己喜欢的编辑环境，而不用来回切换(这是非常重要的，比如我经常使用的是VSCode各种快捷键会让文本编辑变得很容易，相比一些拖拖拽拽可视化那种编辑方式，文本编辑不见得会有多慢)   使用环境 主流的博客和markdown编辑器都支">
@@ -184,7 +184,7 @@ A --> B3</pre>
 
 <p>dateFormat  YYYY-MM-DD<br>title Adding GANTT diagram to mermaid</p>
 <p>section A section<br>Completed task            :done,    des1, 2014-01-06,2014-01-08<br>Active task               :active,  des2, 2014-01-09, 3d<br>Future task               :         des3, after des2, 5d<br>Future task2   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  &lt;pre class=&quot;mermaid&quot;&gt;  gantt</span><br><span class="line">  dateFormat  YYYY-MM-DD</span><br><span class="line">  title Adding GANTT diagram to mermaid</span><br><span class="line"></span><br><span class="line">  section A section</span><br><span class="line">  Completed task            :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line">  Active task               :active,  des2, 2014-01-09, 3d</span><br><span class="line">  Future task               :         des3, after des2, 5d</span><br><span class="line">  Future task2               :         des4, after des3, 5d&lt;/pre&gt;</span><br><span class="line"></span><br><span class="line">- classDiagram</span><br><span class="line">  ```C#</span><br><span class="line">  int a = 0;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">  &lt;pre class=&quot;mermaid&quot;&gt;  gantt</span><br><span class="line">  dateFormat  YYYY-MM-DD</span><br><span class="line">  title Adding GANTT diagram to mermaid</span><br><span class="line"></span><br><span class="line">  section A section</span><br><span class="line">  Completed task            :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line">  Active task               :active,  des2, 2014-01-09, 3d</span><br><span class="line">  Future task               :         des3, after des2, 5d</span><br><span class="line">  Future task2               :         des4, after des3, 5d&lt;/pre&gt;</span><br><span class="line"></span><br><span class="line">- classDiagram</span><br><span class="line"></span><br><span class="line">  ```C#</span><br><span class="line">  classDiagram</span><br><span class="line">  Class01 &lt;|-- AveryLongClass : Cool</span><br><span class="line">  Class03 *-- Class04</span><br><span class="line">  Class05 o-- Class06</span><br><span class="line">  Class07 .. Class08</span><br><span class="line">  Class09 --&gt; C2 : Where am i?</span><br><span class="line">  Class09 --* C3</span><br><span class="line">  Class09 --|&gt; Class07</span><br><span class="line">  Class07 : equals()</span><br><span class="line">  Class07 : Object[] elementData</span><br><span class="line">  Class01 : size()</span><br><span class="line">  Class01 : int chimp</span><br><span class="line">  Class01 : int gorilla</span><br><span class="line">  Class08 &lt;--&gt; C2: Cool label</span><br></pre></td></tr></table></figure>
 
 <pre class="mermaid">  classDiagram
 Class01 <|-- averylongclass : cool class03 *-- class04 class05 o-- class06 class07 .. class08 class09 --> C2 : Where am i?
@@ -198,13 +198,15 @@ Class01 : int gorilla
 Class08 <--> C2: Cool label</--></|--></pre>
 
 
+
+
 </li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/Mermaid/" data-id="cjwqirujw0001sw7elzbxjleb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/Mermaid/" data-id="cjwqj132u0002g07e9m4zmufs" class="article-share-link">Share</a>
       
       
     </footer>

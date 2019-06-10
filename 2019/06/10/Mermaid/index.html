@@ -87,7 +87,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="使用marmaid让markdown支持作图"><a href="#使用marmaid让markdown支持作图" class="headerlink" title="使用marmaid让markdown支持作图"></a>使用marmaid让markdown支持作图</h1><ul>
-<li><a href="https://mermaidjs.github.io/" target="_blank" rel="noopener">mermaid官网</a></li>
+<li><a href="https://mermaidjs.github.io/">mermaid官网</a></li>
 <li>使用目的<ul>
 <li>让编辑轻量化</li>
 <li>简单的文本就可以制作出流程图、时序图、甘特图、用例图</li>
@@ -97,7 +97,7 @@
 <li>使用环境 主流的博客和markdown编辑器都支持mermaid,以下只列出测试可用的<ul>
 <li>编辑器<ul>
 <li>VSCode 需下载扩展[Markdown Preview Mermaid Support]</li>
-<li><a href="https://www.typora.io/" target="_blank" rel="noopener">typora</a>(支持实时预览的MarkDown编辑器，并且不用分屏，做了很多内置的快捷优化，使用起来很方便，唯一的缺点是快捷键与VS这类IDE没法比)</li>
+<li><a href="https://www.typora.io/">typora</a>(支持实时预览的MarkDown编辑器，并且不用分屏，做了很多内置的快捷优化，使用起来很方便，唯一的缺点是快捷键与VS这类IDE没法比)</li>
 </ul>
 </li>
 <li>博客平台<ul>
@@ -114,47 +114,83 @@
 </li>
 </ul>
 <ul>
-<li>流程图的制作相当的简单自由，<a href="https://mermaidjs.github.io/flowchart.html" target="_blank" rel="noopener">官方的教程示例非常详细</a></li>
+<li>流程图的制作相当的简单自由，<a href="https://mermaidjs.github.io/flowchart.html">官方的教程示例非常详细</a></li>
 </ul>
 <h3 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h3><ul>
-<li><p>流程图的连接线太僵硬了，严重影响没关呀。<a href="https://github.com/knsv/mermaid/issues/580#issuecomment-373929046" target="_blank" rel="noopener">官方FAQ How to change flowchart curve style?</a>,其中在MarkDown中的处理方式是在mermaid块内部加上2行用于指定曲线类型的语句,</p>
+<li><p>流程图的连接线太僵硬了，严重影响没关呀。<a href="https://github.com/knsv/mermaid/issues/580#issuecomment-373929046">官方FAQ How to change flowchart curve style?</a>,其中在MarkDown中的处理方式是在mermaid块内部加上2行用于指定曲线类型的语句,</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%% </span><br><span class="line">linkStyle default interpolate MonotoneX</span><br></pre></td></tr></table></figure>
 
-<p>它支持所有的<a href="https://github.com/d3/d3-shape/blob/master/README.md#curves" target="_blank" rel="noopener">D3Curves</a>,主要的各种样式示例如下：</p>
+<p>它支持所有的<a href="https://github.com/d3/d3-shape/blob/master/README.md#curves">D3Curves</a>,主要的各种样式示例如下：</p>
 <ul>
-<li><p>Linear  默认的就是线性的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR; </span><br><span class="line">%% </span><br><span class="line">linkStyle default interpolate Linear</span><br><span class="line">A --&gt; B1</span><br><span class="line">A --&gt; B2</span><br><span class="line">A --&gt; B3</span><br></pre></td></tr></table></figure>
+<li>Linear  默认的就是线性的<pre class="mermaid">      graph LR; 
+%% 
+linkStyle default interpolate Linear
+A --> B1
+A --> B2
+A --> B3</pre></li>
+<li>Basis<pre class="mermaid">      graph LR; 
+%% 
+linkStyle default interpolate Basis
+A --> B1
+A --> B2
+A --> B3</pre></li>
+<li>MonotoneX<pre class="mermaid">      graph LR; 
+%% 
+linkStyle default interpolate MonotoneX
+A --> B1
+A --> B2
+A --> B3</pre></li>
+<li>MonotoneY<pre class="mermaid">      graph LR; 
+%% 
+linkStyle default interpolate MonotoneY
+A --> B1
+A --> B2
+A --> B3</pre></li>
+<li>Cardinal<pre class="mermaid">      graph LR; 
+%% 
+linkStyle default interpolate Cardinal
+A --> B1
+A --> B2
+A --> B3</pre></li>
+<li>Bundle<pre class="mermaid">      graph LR; 
+%% 
+linkStyle default interpolate Bundle
+A --> B1
+A --> B2
+A --> B3</pre></li>
+<li>CatmullRom<pre class="mermaid">      graph LR; 
+%% 
+linkStyle default interpolate CatmullRom
+A --> B1
+A --> B2
+A --> B3</pre></li>
+<li>Cardinal<pre class="mermaid">      graph LR; 
+%% 
+linkStyle default interpolate Cardinal
+A --> B1
+A --> B2
+A --> B3</pre>
+<ul>
+<li>一些不错的功能</li>
+</ul>
 </li>
-<li><p>Basis</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR; </span><br><span class="line">%% </span><br><span class="line">linkStyle default interpolate Basis</span><br><span class="line">A --&gt; B1</span><br><span class="line">A --&gt; B2</span><br><span class="line">A --&gt; B3</span><br></pre></td></tr></table></figure>
+</ul>
 </li>
-<li><p>MonotoneX</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR; </span><br><span class="line">%% </span><br><span class="line">linkStyle default interpolate MonotoneX</span><br><span class="line">A --&gt; B1</span><br><span class="line">A --&gt; B2</span><br><span class="line">A --&gt; B3</span><br></pre></td></tr></table></figure>
+<li><p>让流程图中的节点作为链接 <code>click id link introduce</code>,示例<code>Click A &quot;https://www.baidu.com&quot; &quot;百度&quot;</code></p>
 </li>
-<li><p>MonotoneY</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR; </span><br><span class="line">%% </span><br><span class="line">linkStyle default interpolate MonotoneY</span><br><span class="line">A --&gt; B1</span><br><span class="line">A --&gt; B2</span><br><span class="line">A --&gt; B3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Cardinal</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR; </span><br><span class="line">%% </span><br><span class="line">linkStyle default interpolate Cardinal</span><br><span class="line">A --&gt; B1</span><br><span class="line">A --&gt; B2</span><br><span class="line">A --&gt; B3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Bundle</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR; </span><br><span class="line">%% </span><br><span class="line">linkStyle default interpolate Bundle</span><br><span class="line">A --&gt; B1</span><br><span class="line">A --&gt; B2</span><br><span class="line">A --&gt; B3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>CatmullRom</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR; </span><br><span class="line">%% </span><br><span class="line">linkStyle default interpolate CatmullRom</span><br><span class="line">A --&gt; B1</span><br><span class="line">A --&gt; B2</span><br><span class="line">A --&gt; B3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Cardinal</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR; </span><br><span class="line">%% </span><br><span class="line">linkStyle default interpolate Cardinal</span><br><span class="line">A --&gt; B1</span><br><span class="line">A --&gt; B2</span><br><span class="line">A --&gt; B3</span><br></pre></td></tr></table></figure>
+</ul>
+<ul>
+<li><p>使用marmaid的流程图来制作简易的思维导图</p>
+<pre class="mermaid">  graph LR;
+%% 
+linkStyle default interpolate MonotoneX
 
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>一些不错的功能</p>
-<ul>
-<li>让流程图中的节点作为链接 <figure class="highlight plain"><figcaption><span>id link introduce```,示例```Click A "https://www.baidu.com" "百度"```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">  </span><br><span class="line">- 使用marmaid的流程图来制作简易的思维导图</span><br><span class="line">  ```mermaid </span><br><span class="line">  graph LR;</span><br><span class="line">  %% </span><br><span class="line">  linkStyle default interpolate MonotoneX</span><br><span class="line"></span><br><span class="line">  A(核心主题) --&gt; B1</span><br><span class="line">  A --&gt; B2</span><br><span class="line">  A --&gt; B3</span><br><span class="line">  B1 --&gt; B1C1</span><br><span class="line">  B1 --&gt; B1C2</span><br><span class="line">  B2 --&gt; B2C1</span><br></pre></td></tr></table></figure></li>
-</ul>
+A(核心主题) --> B1
+A --> B2
+A --> B3
+B1 --> B1C1
+B1 --> B1C2
+B2 --> B2C1</pre>
 <p>可以满足轻量级的思维导图，节点不能太多，因为它不支持折叠节点呀，太多了屏幕放不下。</p>
 </li>
 </ul>
@@ -162,7 +198,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/Mermaid/" data-id="cjwqerudg0000347e0qzj4ey7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/Mermaid/" data-id="cjwqg5hk40002xc7e4ou4zu0n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -170,6 +206,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2019/06/10/testMermaid/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          testMermaid
+        
+      </div>
+    </a>
   
   
     <a href="/2019/06/10/第一篇测试博客/" id="article-nav-older" class="article-nav-link-wrap">
@@ -209,6 +254,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/06/10/testMermaid/">testMermaid</a>
+          </li>
         
           <li>
             <a href="/2019/06/10/Mermaid/">Mermaid</a>
@@ -259,6 +308,14 @@
 <script src="/js/script.js"></script>
 
 
+
+
+  <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
 
   </div>
 </body>
